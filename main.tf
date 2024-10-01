@@ -66,7 +66,7 @@ resource "aws_db_parameter_group" "education" {
 }
 
 resource "aws_db_instance" "education" {
-  identifier             = "${var.db_name}-${random_pet.random.id}"
+  identifier             = "${var.db_name}"
   instance_class         = "db.t3.micro"
   allocated_storage      = 5
   engine                 = "postgres"
